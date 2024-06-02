@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Marketplace</title>
+    <!-- <link rel="stylesheet" href="Mar.css"> -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Community Marketplace</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for products, apartments and more">
+            <button class="search-btn" onclick="performSearch()">Search</button>
+        </div>
+        <nav>
+            <button class="sell-btn" onclick="window.location.href='sell.html'">+ Sell</button>
+        </nav>
+    </header>
+    <div class="category-container">
+        <select id="category-dropdown" onchange="window.location.href=this.value">
+            <option value="">All Categories</option>
+            <option value="sale.html">For Sale: Houses & Apartments</option>
+            <option value="rent.html">For Rent: Houses & Apartments</option>
+            <option value="product.html">Local Products</option>
+        </select>
+    </div>
+    <main>
+        <section id="hero">
+            <h2>Buy and Sell Everything</h2>
+            <p>Your local marketplace to find great deals or post your own ads.</p>
+        </section>
+        <section id="recommendations">
+            <h2>Fresh Recommendations</h2>
+            <div class="recommendation-list">
+                <button class="recommendation-item" onclick="window.location.href='post1.html'">
+                    <div class="item-details">
+                        <img src="https://lscdn.blob.core.windows.net/add-post/subcategoryid/10664778-add-17142007716995255.jpeg" alt="Image for sale">
+                        <p class="price"><strong>₹ 88 lakhs</strong></p>
+                        <p class="description">5 Bds - 4 Ba - 1350 ft²<br>5 BHK Duplex with modular kitchen, prime location in Siripuram, Vizag.</p>
+                        <p class="location-time">Siripuram, 2 days ago</p>
+                        <p class="seller-contact">Contact: +91 9876543210</p>
+                    </div>
+                </button>
+                <button class="recommendation-item" onclick="window.location.href='post4.html'">
+                    <div class="item-details">
+                        <img src="https://www.archanaskitchen.com/imgcache/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2022/Authentic_Punjabi_Mango_Picke_In_Mustard_Oil_No_Sun_Method_7_400x320.jpg" alt="Image for pickles">
+                        <p class="price">₹ 500</p>
+                        <p class="description">Priya Pickles</p>
+                        <p class="location-time">Siripuram, 5 days ago</p>
+                    </div>
+                </button>
+                <button class="recommendation-item" onclick="window.location.href='post2.html'">
+                    <div class="item-details">
+                        <img src="https://is1-2.housingcdn.com/01c16c28/42397a57da5b7fe44331d89fd74733a1/v0/fs/2_bhk_independent_house-for-rent-gajuwaka-Visakhapatnam-hall.jpg" alt="Image for rent">
+                        <p class="price">₹ 10,000/month</p>
+                        <p class="description">2 BHK Independent House for Rent in Gajuwaka</p>
+                        <p class="location-time">Gajuwaka, Visakhapatnam</p>
+                    </div>
+                </button>
+                <button class="recommendation-item" onclick="window.location.href='post3.html'">
+                    <div class="item-details">
+                        <img src="https://lscdn.blob.core.windows.net/add-post/subcategoryid/10664778-add-17134953525657815.jpeg" alt="Image for sale">
+                        <p class="price"><strong>₹ 60 lakhs</strong></p>
+                        <p class="description">3 Bds - 2 Ba - 1100 ft²<br>3 BHK Independent House, prime location in Siripuram, Vizag.</p>
+                        <p class="location-time">Siripuram, 5 days ago</p>
+                        <p class="seller-contact">Contact: +91 9876543210</p>
+                    </div>
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>All rights reserved &copy; 2024 Community Marketplace</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

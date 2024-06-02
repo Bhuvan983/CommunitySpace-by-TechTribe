@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Issue Reporter</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #f9f9f9; /* Light grey background */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        #voice-recorder {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Report a Community Issue</h1>
+        <form id="issue-form">
+            <label for="issue-description">Issue Description:</label>
+            <textarea id="issue-description" name="description" rows="4" required></textarea>
+
+            <label for="issue-image">Upload an Image:</label>
+            <input type="file" id="issue-image" name="image" accept="image/*">
+
+            <label for="issue-voice">Record a Voice Note:</label>
+            <div id="voice-recorder">
+                <button type="button" id="record-btn">Record</button>
+                <button type="button" id="stop-btn" disabled>Stop</button>
+                <audio id="audio-playback" controls></audio>
+                <input type="hidden" id="audio-data" name="audio-data">
+            </div>
+
+            <button type="submit">Submit Issue</button>
+        </form>
+    </div>
+</body>
+</html>

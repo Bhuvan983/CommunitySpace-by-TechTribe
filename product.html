@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Products</title>
+    <link rel="stylesheet" href="Mar.css">
+</head>
+<body>
+    <header>
+         <div class="logo">
+            <h1>Community Marketplace</h1>
+            <button class="home-btn" onclick="window.location.href='Mar.html'">Home</button>
+        </div>
+        <nav>
+            <button class="sell-btn" onclick="window.location.href='sell.html'">+ Sell</button>
+        </nav>
+    </header>
+    <div class="category-container">
+        <select id="category-dropdown" onchange="window.location.href=this.value">
+            <option value="Mar.html">All Categories</option>
+            <option value="sale.html">For Sale: Houses & Apartments</option>
+            <option value="rent.html">For Rent: Houses & Apartments</option>
+            <option value="product.html" selected>Local Products</option>
+        </select>
+    </div>
+    <main>
+        <section id="hero">
+            <h2>Explore Local Products</h2>
+            <p>Discover the best local products available in your area.</p>
+        </section>
+        <section id="recommendations">
+            <h2>Fresh Recommendations</h2>
+            <div class="recommendation-list">
+                <button class="recommendation-item" onclick="window.location.href='post4.html'">
+                    <div class="item-details">
+                        <img src="https://www.archanaskitchen.com/imgcache/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2022/Authentic_Punjabi_Mango_Picke_In_Mustard_Oil_No_Sun_Method_7_400x320.jpg" alt="Priya Pickles">
+                        <p class="price">₹ 500</p>
+                        <p class="description">Priya Pickles<br>Authentic Punjabi Mango Pickle in Mustard Oil.</p>
+                        <p class="location-time">Siripuram, 5 days ago</p>
+                    </div>
+                </button>
+                <button class="recommendation-item" onclick="window.location.href='post5.html'">
+                    <div class="item-details">
+                        <img src="https://thumbs.dreamstime.com/b/clothes-sale-colorful-rack-outside-fashion-store-34214144.jpg" alt="Clothes for Sale">
+                        <p class="price">₹ 1,200</p>
+                        <p class="description">Clothes Sale<br>Colorful clothes on sale, various sizes and styles.</p>
+                        <p class="location-time">Downtown, 3 days ago</p>
+                    </div>
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>All rights reserved &copy; 2024 Community Marketplace</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2D8077;
+    padding: 10px 20px;
+    color: white;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-bar .search-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.sell-btn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sell-btn:hover {
+    background-color: darkorange;
+}
+
+.category-container {
+    padding: 10px 20px;
+}
+
+#category-dropdown {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+#hero h2 {
+    margin: 0;
+    font-size: 2.5em;
+}
+.recommendation-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.recommendation-item {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.recommendation-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.item-details .price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.item-details .description {
+    margin: 10px 0;
+}
+
+.item-details .location-time {
+    color: gray;
+    font-size: 0.9em;
+}
+
+/* Adjust image size for smaller screens */
+@media (max-width: 768px) {
+    .recommendation-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #2D8077;
+    color: white;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height of the container to full viewport height */
+}
+
+.post-details {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}

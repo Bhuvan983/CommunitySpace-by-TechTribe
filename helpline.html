@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Helpline + Emergency Contacts</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Light gray background for the body */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff; /* White background for content */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for container */
+        }
+
+        .transparent-container {
+            background-color: transparent; /* Transparent background for header container */
+            box-shadow: none; /* Remove shadow for header container */
+            padding: 0; /* Remove padding for header container */
+        }
+
+        .header {
+            background-color: #007bff; /* Vibrant blue background for header */
+            color: #fff; /* White text color */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: white; /* White text color */
+        }
+
+        .hero {
+            background: none; /* Remove background color */
+            color: #333; /* Text color */
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contacts {
+            background-color: #fff; /* White background for contacts section */
+            padding: 50px 0;
+        }
+
+        .contact-card {
+            background-color: #f9f9f9; /* Light gray background for contact cards */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for contact cards */
+        }
+
+        footer {
+            background-color: #007bff; 
+            color: white; 
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            background-color: transparent; /* Transparent background for footer container */
+            box-shadow: none; /* Remove shadow for footer container */
+            padding: 0; /* Remove padding for footer container */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container transparent-container">
+            <h1 class="header-title">Community Helpline</h1>
+            <nav>
+                <input type="text" id="searchInput" placeholder="Search contacts..." onkeyup="filterContacts()">
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>We are here to help!</h2>
+                <p>Find emergency contact details of our community leaders below.</p>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="contact-card" data-name="John Doe">
+                    <h2>Authority Head</h2>
+                    <p><strong>Name:</strong> Raghavendra</p>
+                    <p><strong>Phone:</strong> <a href="tel:+126956789">+1 236 967 89</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:raghav65@gmail.com">raghav65@gmail.com</a></p>
+                </div>
+                <div class="contact-card" data-name="Jane Smith">
+                    <h2>Municipal officer</h2>
+                    <p><strong>Name:</strong> Prabhavathi</p>
+                    <p><strong>Phone:</strong> <a href="tel:+987654321">+9 876 543 21</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:prabha.thi@gmail.com">prabha.thi@gmail.com</a></p>
+                </div>
+                <div class="contact-card" data-name="Mike Johnson">
+                    <h2>Manager</h2>
+                    <p><strong>Name:</strong> Varma</p>
+                    <p><strong>Phone:</strong> <a href="tel:+112233445">+1 122 334 45</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:varma@gmail.com">varma@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container transparent-container">
+            <p>&copy; 2024 Community Helpline. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function filterContacts() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const contactCards = document.querySelectorAll('.contact-card');
+
+            contactCards.forEach(card => {
+                const name = card.getAttribute('data-name').toLowerCase();
+                if (name.includes(filter)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

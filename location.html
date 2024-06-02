@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get User Locality</title>
+</head>
+<body>
+    <h1>Get User Locality</h1>
+    <p id="locality"></p>
+
+    <script>
+        // Function to get user's locality based on their geolocation
+        function getUserLocality() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+            } else {
+                console.error("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // Success callback function for getCurrentPosition
+        function successCallback(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Using reverse geocoding API to get locality
+            var geocodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=YOUR_API_KEY";
+
+            // Fetching data from the API
+            fetch(geocodingUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Extracting locality from the response
+                    var locality = data.results[0].address_components.find(component => component.types.includes('locality'));
+                    if (locality) {
+                        document.getElementById("locality").innerText = "Your locality is: " + locality.long_name;
+                    } else {
+                        document.getElementById("locality").innerText = "Could not determine your locality.";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        // Error callback function for getCurrentPosition
+        function errorCallback(error) {
+            console.error('Error getting user location:', error.message);
+        }
+
+        // Call the function to get user locality when the page loads
+        window.onload = getUserLocality;
+    </script>
+</body>
+</html>

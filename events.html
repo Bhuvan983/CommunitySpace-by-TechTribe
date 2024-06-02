@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            position: relative;
+            height: 30px;
+        }
+
+        .hamburger-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            transition: opacity 0.5s;
+        }
+
+        header {
+            background-color: #2346f7c3;
+            color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            height: 30px;
+        }
+
+        .create-button {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 3px;
+        }
+
+        div.polaroid {
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+            display: grid;
+        }
+
+        .bcontainer {
+            text-align: center;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #04AA6D;
+            border-radius: 3px;
+        }
+
+        .button1:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+        
+        .button2 {
+            background-color: white;
+            color: black;
+            border: 2px solid #ff0000;
+            border-radius: 3px;
+        }
+
+        .button2:hover {
+            background-color: #f70707;
+            color: white;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        body {
+            background: url('https://img.freepik.com/premium-vector/blue-paper-cut-background-vector-image-design-backdrop-presentation_688730-295.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+        }
+
+        .container:hover .overlay {
+            width: 100%;
+        }
+
+        .text {
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+        .description {
+            display: none;
+            background-color: rgb(50, 255, 173);
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            margin-right: 10px;
+           width:150%;
+            height:100%;
+            overflow-y:auto;
+        }
+
+      .upload-date {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center py-4">
+        <div class="header-content">
+            <div class="hamburger-icon" onclick="toggleNav()">&#9776;</div>
+            <h2>Events</h2>
+            <button class="create-button" onclick="openModal()">Create</button>
+        </div>
+    </header>
+    <br>
+    <div id="posts" class="main">
+        <div class="container">
+            <img src="cslogo.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Hello World</div>
+            </div>
+            <div class="bcontainer">
+                <button class="button button1" onclick="toggleDescription(this)">More</button>
+            </div>
+            <div class="description">This is a description.</div>
+        </div>
+        <div class="container">
+            <img src="cslogo.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Hello World</div>
+            </div>
+            <div class="bcontainer">
+                <button class="button button1" onclick="toggleDescription(this)">More</button>
+            </div>
+            <div class="description">This is a description.</div>
+        </div>
+        <div class="container">
+            <img src="cslogo.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Hello World</div>
+            </div>
+            <div class="bcontainer">
+                <button class="button button1" onclick="toggleDescription(this)">More</button>
+            </div>
+            <div class="description">This is a description.</div>
+        </div>
+        <div class="container">
+            <img src="cslogo.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Hello World</div>
+            </div>
+            <div class="bcontainer">
+                <button class="button button1" onclick="toggleDescription(this)">More</button>
+            </div>
+            <div class="description">This is a description.</div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form id="createPostForm">
+                <div class="form-group">
+                    <label for="imageURL">Image URL</label>
+                    <input type="text" id="imageURL" name="imageURL" required>
+                    <input type="file" id="imageFile" name="imageFile" accept="image/*" onchange="handleFileSelect(event)">
+                </div>
+                <div class="form-group">
+                    <label for="overlayText">Overlay Text</label>
+                    <input type="text" id="overlayText" name="overlayText" required>
+                </div>
+                <div class="form-group">
+                    <label for="buttonText">Button Text</label>
+                    <input type="text" id="buttonText" name="buttonText" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <button type="submit" class="button">Create Post</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            loadPosts();
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Open the modal
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        // Close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Handle form submission
+        document.getElementById("createPostForm").onsubmit = function(event) {
+            event.preventDefault();
+            var imageURL = document.getElementById("imageURL").value;
+            var overlayText = document.getElementById("overlayText").value;
+            var buttonText = document.getElementById("buttonText").value;
+            var description = document.getElementById("description").value;
+
+            var post = {
+                imageURL: imageURL,
+                overlayText: overlayText,
+                buttonText: buttonText,
+                description: description
+            };
+
+            savePost(post);
+            addPostToDOM(post);
+            closeModal();
+        }
+
+        function savePost(post) {
+            var posts = JSON.parse(localStorage.getItem('posts')) || [];
+            posts.push(post);
+            localStorage.setItem('posts', JSON.stringify(posts));
+        }
+
+        function loadPosts() {
+            var posts = JSON.parse(localStorage.getItem('posts')) || [];
+            posts.forEach(post => {
+                addPostToDOM(post);
+            });
+        }
+
+        function addPostToDOM(post) {
+            var newPost = document.createElement("div");
+            newPost.className = "container";
+            newPost.innerHTML = `
+                <img src="${post.imageURL}" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">${post.overlayText}</div>
+                </div>
+                <div class="bcontainer">
+                    <button class="button button1" onclick="toggleDescription(this)">${post.buttonText}</button>
+                    <button class="button button2" onclick="deletePost(this)">Delete</button>
+                </div>
+                <div class="description">
+                    <span class="upload-date">${formatDate(new Date())}</span>
+                    <p>${post.description}</p>
+                </div>
+            `;
+            document.getElementById("posts").appendChild(newPost);
+        }
+
+        function deletePost(button) {
+            var container = button.parentElement.parentElement;
+            var imageURL = container.querySelector('.image').src;
+            var posts = JSON.parse(localStorage.getItem('posts')) || [];
+            posts = posts.filter(post => post.imageURL !== imageURL);
+            localStorage.setItem('posts', JSON.stringify(posts));
+            container.remove();
+        }
+
+        function toggleDescription(button) {
+            var description = button.parentElement.nextElementSibling;
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+
+        function handleFileSelect(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('imageURL').value = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function formatDate(date) {
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var day = date.getDate();
+            var monthIndex = date.getMonth();
+            var year = date.getFullYear();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+
+            return `${monthNames[monthIndex]} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+.home {
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    color: inherit;
+    display: inline-block;
+    min-width: 59px;
+  }
+  .logo-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 47px 0 0;
+  }
+  .travel-logo-1 {
+    height: 124px;
+    width: 129px;
+    position: relative;
+    object-fit: cover;
+  }
+  .header {
+    width: 750px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-xl);
+    color: var(--color-black);
+    font-family: var(--font-kufam);
+  }
+  .blank-line,
+  .discussion-forum,
+  .the-community-space {
+    margin: 0;
+  }
+  .the-community-space-discussion-container {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: inherit;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .title {
+    width: 903px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 66px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .the-discussion-forum {
+    margin: 0;
+    width: 903px;
+    height: 72px;
+    position: relative;
+    font-size: var(--font-size-xl);
+    text-transform: capitalize;
+    color: #292323;
+    display: inline-block;
+    flex-shrink: 0;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+  }
+  .description {
+    width: 1159px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #b3e22c;
+    border: 1px solid var(--color-black);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 var(--padding-xl) 29px;
+    gap: 13.5px;
+    mix-blend-mode: darken;
+    max-width: 100%;
+  }
+  .content,
+  .forum-info,
+  .main {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .forum-info {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .content,
+  .main {
+    justify-content: flex-start;
+  }
+  .content {
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .main {
+    width: 1234px;
+    flex-direction: row;
+    padding: 0 2px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 40px;
+    color: var(--color-black);
+    font-family: var(--font-kufam);
+  }
+  .separator-child {
+    width: 511px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+  }
+  .separator {
+    width: 1251px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 var(--padding-14xl);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .feature-icons {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .report-an-issue {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: inherit;
+  }
+  .feature-details {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 var(--padding-xl) 0 var(--padding-2xl);
+  }
+  .conduct-polls-and,
+  .fostering-community-driven-sol,
+  .report-and-prioritize {
+    margin: 0;
+  }
+  .report-and-prioritize-container {
+    position: relative;
+    line-height: 160.3%;
+    text-transform: capitalize;
+  }
+  .poll-description,
+  .read-more {
+    font-size: var(--font-size-base);
+  }
+  .poll-description {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 31px;
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: left;
+    color: var(--color-dimgray);
+  }
+  .read-more {
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: var(--font-kufam);
+    color: var(--color-white);
+    text-align: center;
+    display: inline-block;
+    min-width: 83px;
+  }
+  .feature-icons-parent,
+  .poll-button,
+  .read-poll {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .read-poll {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--color-black);
+    flex: 1;
+    border-radius: var(--br-8xs);
+    flex-direction: row;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .issue-button:hover,
+  .news-button1:hover,
+  .read-poll:hover {
+    background-color: var(--color-darkslategray);
+  }
+  .feature-icons-parent,
+  .poll-button {
+    justify-content: flex-start;
+  }
+  .poll-button {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 var(--padding-7xl) 0 var(--padding-8xl);
+  }
+  .feature-icons-parent {
+    height: 568px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-white);
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 0 28px;
+    gap: 30px;
+  }
+  .frame-child {
+    align-self: stretch;
+    height: 311px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .chat-with-your {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: inherit;
+  }
+  .community-chat {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-7xl);
+  }
+  .and-support,
+  .connect-with-neighbors,
+  .fostering-community-engagement {
+    margin: 0;
+  }
+  .connect-with-neighbors-container {
+    position: relative;
+    line-height: 160.3%;
+    text-transform: capitalize;
+  }
+  .news-updates,
+  .read-more1 {
+    font-size: var(--font-size-base);
+  }
+  .news-updates {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-4xl);
+    text-align: left;
+    color: var(--color-dimgray);
+  }
+  .read-more1 {
+    text-decoration: none;
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: var(--font-kufam);
+    color: var(--color-white);
+    text-align: center;
+    display: inline-block;
+    min-width: 83px;
+  }
+  .issue-button {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--color-black);
+    align-self: stretch;
+    border-radius: var(--br-8xs);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .community-chat-parent,
+  .frame-wrapper,
+  .rectangle-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .community-chat-parent {
+    flex: 1;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .frame-wrapper,
+  .rectangle-parent {
+    box-sizing: border-box;
+  }
+  .frame-wrapper {
+    width: 375px;
+    flex-direction: row;
+    padding: 0 13px;
+  }
+  .rectangle-parent {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-white);
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 0 25px;
+    gap: 18px;
+  }
+  .frame-item {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .trending-newsupdates {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: inherit;
+  }
+  .trending-newsupdates-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xl) 0 var(--padding-17xl);
+  }
+  .and-events,
+  .awareness,
+  .enhancing-community-involvemen,
+  .stay-informed-about {
+    margin: 0;
+  }
+  .stay-informed-about-container {
+    position: relative;
+    line-height: 160.3%;
+    text-transform: capitalize;
+  }
+  .news-button {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-17xl);
+  }
+  .read-more2 {
+    text-decoration: none;
+    position: relative;
+    font-size: var(--font-size-base);
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: var(--font-kufam);
+    color: var(--color-white);
+    text-align: center;
+    display: inline-block;
+    min-width: 83px;
+  }
+  .news-button1 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--color-black);
+    align-self: stretch;
+    border-radius: var(--br-8xs);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .frame-parent,
+  .news-button-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .news-button-parent {
+    align-self: stretch;
+    align-items: flex-start;
+    gap: var(--gap-mid);
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--color-dimgray);
+  }
+  .frame-parent {
+    flex: 1;
+    align-items: flex-end;
+    gap: 24px;
+    max-width: 100%;
+  }
+  .frame-container,
+  .rectangle-group {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .frame-container {
+    width: 391px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-2xl);
+  }
+  .rectangle-group {
+    height: 568px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-white);
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 0 var(--padding-4xl);
+    gap: var(--gap-mid);
+  }
+  .discussion-forum-landing-page,
+  .features,
+  .rectangle-group {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .features {
+    align-self: stretch;
+    display: grid;
+    flex-direction: row;
+    gap: 38.5px;
+    max-width: 100%;
+    grid-template-columns: repeat(3, minmax(301px, 1fr));
+    text-align: center;
+    font-size: var(--font-size-5xl);
+    color: var(--color-black);
+    font-family: var(--font-kufam);
+  }
+  .discussion-forum-landing-page {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 19px 78px 134px;
+    box-sizing: border-box;
+    gap: 14px;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 1050px) {
+    .features {
+      justify-content: center;
+      grid-template-columns: repeat(2, minmax(301px, 523px));
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .the-community-space-discussion-container {
+      font-size: 32px;
+    }
+    .title {
+      padding-left: var(--padding-14xl);
+      padding-right: var(--padding-14xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 725px) {
+    .features {
+      gap: 19px;
+      grid-template-columns: minmax(301px, 1fr);
+    }
+    .discussion-forum-landing-page {
+      padding-left: var(--padding-20xl);
+      padding-right: var(--padding-20xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .the-community-space-discussion-container {
+      font-size: var(--font-size-5xl);
+    }
+    .the-discussion-forum {
+      font-size: var(--font-size-base);
+    }
+    .chat-with-your,
+    .report-an-issue {
+      font-size: var(--font-size-lgi);
+    }
+    .community-chat-parent {
+      gap: 16px;
+    }
+    .trending-newsupdates {
+      font-size: var(--font-size-lgi);
+    }
+  }

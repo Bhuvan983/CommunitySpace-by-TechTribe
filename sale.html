@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale: Houses & Apartments</title>
+    <link rel="stylesheet" href="Mar.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Community Marketplace</h1>
+            <button class="home-btn" onclick="window.location.href='Mar.html'">Home</button>
+        </div>
+        <nav>
+            <button class="sell-btn" onclick="window.location.href='sell.html'">+ Sell</button>
+        </nav>
+    </header>
+    <div class="category-container">
+        <select id="category-dropdown" onchange="window.location.href=this.value">
+            <option value="Mar.html">All Categories</option>
+            <option value="sale.html" selected>For Sale: Houses & Apartments</option>
+            <option value="rent.html">For Rent: Houses & Apartments</option>
+            <option value="product.html">Local Products</option>
+        </select>
+    </div>
+    <main>
+         <section id="hero">
+            <h2>Sale: Houses & Apartments</h2>
+            <p>Find your ideal property here.</p>
+        </section>
+        <div class="post-content">
+            <div class="post-details">
+                 <img src="https://lscdn.blob.core.windows.net/add-post/subcategoryid/10664778-add-17142007716995255.jpeg" alt="Image for sale">
+            <div class="post-details">
+                <p class="price"><strong>₹ 88 lakhs</strong></p>
+                <p class="description">5 Bds - 4 Ba - 1350 ft²<br>5 BHK Duplex with modular kitchen, prime location in Siripuram, Vizag.</p>
+                <p class="location-time">Siripuram, 2 days ago</p>
+                <p class="seller-contact">Contact: +91 9876543210</p>
+            </div>
+             <img src="https://lscdn.blob.core.windows.net/add-post/subcategoryid/10664778-add-17134953525657815.jpeg">
+                <p class="price"><strong>₹ 1.10 crore</strong></p>
+                <p class="description">4 Bds - 4 Ba - 2400 ft²<br>4 BHK Duplex with modular kitchen, prime location in Siripuram, Vizag.</p>
+                <p class="location-time">Siripuram, 2 days ago</p>
+                <p class="seller-contact">Contact: +91 9000712390</p>
+            </div>
+        </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Community Marketplace</p>
+    </footer>
+</body>
+</html>

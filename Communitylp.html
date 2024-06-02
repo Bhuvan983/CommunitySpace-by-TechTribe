@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <!-- <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <style>
+      .left-column-child {
+    height: 48px;
+    width: 48px;
+    position: relative;
+    border-radius: 50%;
+    border: 0 solid #f23030;
+    box-sizing: border-box;
+  }
+  .community-space {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    top: 20px;
+  }
+  .logo{
+    position: relative;
+    padding-left: 0px;
+    margin-left: 0px;
+
+  }
+
+  .left-column,
+  .space-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .space-details {
+    flex-direction: column;
+    padding: 4px 0 0;
+  }
+  .left-column {
+    flex-direction: row;
+    padding: 0 0 var(--padding-4xs);
+    box-sizing: border-box;
+    gap: 25px;
+    color: #ee2b2b;
+  }
+  .community-space-is {
+    margin: 0;
+    width: 442px;
+    position: relative;
+    font-size: 36px;
+    line-height: 110%;
+    font-weight: 800;
+    font-family: var(--font-jost);
+    display: inline-block;
+    max-width: 100%;
+  }
+  .learn-more-child {
+    height: 93px;
+    width: 202px;
+    position: relative;
+    border-radius: var(--br-31xl);
+    background-color: var(--color-white);
+    display: none;
+  }
+  .learn-more1 {
+    position: relative;
+    font-size: var(--font-size-3xl);
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+    display: inline-block;
+    min-width: 119px;
+    z-index: 1;
+  }
+  .learn-more {
+    cursor: pointer;
+    border: 0;
+    padding: 33px 41px;
+    background-color: var(--color-white);
+    border-radius: var(--br-31xl);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    white-space: nowrap;
+  }
+  .learn-more:hover {
+    background-color: #e6e6e6;
+  }
+  .kosov-icon {
+    height: 342px;
+    width:100%;
+    position: relative;
+    margin-left: 90px;
+    border-radius: var(--br-11xl);
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .slogo{
+    height: 342px;
+    width: 284px;
+    position: relative;
+    border-radius: var(--br-11xl);
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .lajmi-kryesor,
+  .teksti {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .lajmi-kryesor {
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      92.16deg,
+      #40afff,
+      rgba(72, 178, 255, 0.55) 39.86%,
+      rgba(0, 255, 240, 0.86) 46.23%,
+      rgba(0, 255, 240, 0.23) 67.57%,
+      rgba(250, 255, 0, 0.12) 71.6%,
+      rgba(250, 255, 0, 0.58) 95.36%
+    );
+    width: 100%;
+    height: 100%;
+  }
+  .teksti {
+    top: 32px;
+    left: 45px;
+    background: radial-gradient(
+        50% 50%at 50% 50%,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0) 43.8%,
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        50% 50%at 50% 50%,
+        #d9d9d9 1.49%,
+        rgba(217, 217, 217, 0) 41.07%,
+        #d9d9d9
+      );
+    width: 64px;
+    height: 64px;
+    z-index: 1;
+  }
+  .testimonial1 {
+    width: 154px;
+    height: 154px;
+    position: relative;
+    flex-shrink: 0;
+    /* debug_commit: bf4bc93; */
+  }
+  .founded-in-london,
+  .were-xpace {
+    margin: 0;
+  }
+  .were-xpace-founded-in-container {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+    flex-shrink: 0;
+    /* debug_commit: bf4bc93; */
+  }
+  .main-kosovo-news-image {
+    height: 1px;
+    width: 274px;
+    position: absolute;
+    margin: 0 !important;
+    right: -162px;
+    bottom: 45px;
+    border-top: 1px solid var(--color-black);
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .testimonial-details {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .testimonial-content {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 0 0 5px;
+    margin-top: -36px;
+  }
+  .right-column,
+  .testimonial,
+  .testimonial-content,
+  .testimonials {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .testimonial {
+    width: 167px;
+    flex-direction: column;
+    min-width: 167px;
+  }
+  .right-column,
+  .testimonials {
+    flex-direction: row;
+    gap: 11px;
+  }
+  .right-column {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    font-size: 42px;
+    font-family: var(--font-inter);
+  }
+  .frame-child {
+    width: 11.9px;
+    height: 18px;
+    position: absolute;
+    margin: 0 !important;
+    right: -107.9px;
+    bottom: 22px;
+    object-fit: contain;
+  }
+  .avatar-image-icon,
+  .left-column-parent {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .left-column-parent {
+    border-radius: var(--br-11xl);
+    background-color: #9e9e9e;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 34px 39px var(--padding-4xs) 40px;
+    box-sizing: border-box;
+    gap: 79px;
+    min-width: 541px;
+  }
+  .avatar-image-icon {
+    align-self: stretch;
+    height: 204px;
+    border-radius: var(--br-140xl);
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .download-child {
+    height: 40px;
+    width: 126px;
+    position: relative;
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    display: none;
+  }
+  .click-here {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 72px;
+    z-index: 1;
+  }
+  .download,
+  .download-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .download {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    justify-content: flex-start;
+    padding: var(--padding-2xs) var(--padding-8xl);
+    white-space: nowrap;
+  }
+  .download-buttons {
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xl) 0 var(--padding-9xl);
+  }
+  .avatar-row1 {
+    flex: 1;
+    border-radius: var(--br-11xl);
+    background-color: #389fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 var(--padding-25xl) var(--padding-16xl) var(--padding-24xl);
+    box-sizing: border-box;
+    gap: var(--gap-23xl);
+    min-width: 201px;
+  }
+  .avatar-image-icon1 {
+    align-self: stretch;
+    height: 204px;
+    position: relative;
+    border-radius: var(--br-140xl);
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .download-item {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+  }
+  .click-here1 {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 72px;
+    z-index: 1;
+  }
+  .download-buttons1,
+  .download1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .download1 {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: flex-start;
+    padding: var(--padding-2xs) var(--padding-8xl);
+    position: relative;
+    white-space: nowrap;
+  }
+  .download-buttons1 {
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xl) 0 var(--padding-9xl);
+  }
+  .avatar-image-parent,
+  .avatar-row {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .avatar-image-parent {
+    flex: 1;
+    border-radius: var(--br-11xl);
+    background-color: #db2cf7;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 var(--padding-25xl) var(--padding-16xl) var(--padding-24xl);
+    box-sizing: border-box;
+    gap: var(--gap-23xl);
+    min-width: 201px;
+  }
+  .avatar-row {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 var(--padding-5xs) 0 0;
+    gap: var(--gap-16xl);
+  }
+  .avatar-image-icon2 {
+    align-self: stretch;
+    height: 204px;
+    position: relative;
+    border-radius: var(--br-140xl);
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .download-inner {
+    height: 40px;
+    width: 126px;
+    position: relative;
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    display: none;
+  }
+  .click-here2 {
+    position: relative;
+    font-size: var(--font-size-mini);
+    line-height: 120%;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+    display: inline-block;
+    min-width: 72px;
+    z-index: 1;
+  }
+  .download-wrapper,
+  .download2 {
+    display: flex;
+    flex-direction: row;
+    align-items:center
+  }
+  .download2 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-2xs) var(--padding-8xl);
+    background-color: var(--color-limegreen-100);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-31xl);
+    justify-content: flex-start;
+    white-space: nowrap;
+  }
+  .download2:hover {
+    background-color: #4fb526;
+  }
+  .download-wrapper {
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xl) 0 var(--padding-9xl);
+  }
+  .avatar-image-group {
+    flex: 1;
+    border-radius: var(--br-11xl);
+    background-color: #52f9ef;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 var(--padding-25xl) var(--padding-16xl) var(--padding-24xl);
+    box-sizing: border-box;
+    gap: var(--gap-23xl);
+    min-width: 201px;
+  }
+  .avatar-image-icon3 {
+    align-self: stretch;
+    height: 204px;
+    position: relative;
+    border-radius: var(--br-140xl);
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .rectangle-div {
+    height: 40px;
+    width: 126px;
+    position: relative;
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    display: none;
+  }
+  .click-here3 {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 72px;
+    z-index: 1;
+  }
+  .download-container,
+  .download3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .download3 {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    justify-content: flex-start;
+    padding: var(--padding-2xs) var(--padding-8xl);
+    white-space: nowrap;
+  }
+  .download-container {
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xl) 0 var(--padding-9xl);
+  }
+  .avatar-image-container,
+  .avatar-row2 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .avatar-image-container {
+    flex: 1;
+    border-radius: var(--br-11xl);
+    background-color: #9af242;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 var(--padding-25xl) var(--padding-16xl) var(--padding-24xl);
+    box-sizing: border-box;
+    gap: var(--gap-23xl);
+    min-width: 201px;
+  }
+  .avatar-row2 {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 var(--padding-5xs) var(--padding-4xs) 0;
+    gap: var(--gap-16xl);
+  }
+  .avatar-image-icon4 {
+    align-self: stretch;
+    height: 204px;
+    position: relative;
+    border-radius: var(--br-140xl);
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .download-child1 {
+    height: 40px;
+    width: 126px;
+    position: relative;
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    display: none;
+  }
+  .click-here4 {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 72px;
+    z-index: 1;
+  }
+  .download-frame,
+  .download4,
+  .frame-div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .download4 {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    justify-content: flex-start;
+    padding: var(--padding-2xs) var(--padding-8xl);
+    white-space: nowrap;
+  }
+  .download-frame,
+  .frame-div {
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xl) 0 var(--padding-9xl);
+  }
+  .frame-div {
+    flex: 1;
+    border-radius: var(--br-11xl);
+    background-color: #f98112;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 var(--padding-25xl) var(--padding-16xl) var(--padding-24xl);
+    box-sizing: border-box;
+    gap: var(--gap-23xl);
+    min-width: 201px;
+  }
+  .avatar-image-icon5 {
+    align-self: stretch;
+    height: 204px;
+    position: relative;
+    border-radius: var(--br-140xl);
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .download-child2 {
+    height: 40px;
+    width: 126px;
+    position: relative;
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    display: none;
+  }
+  .click-here5 {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 72px;
+    z-index: 1;
+  }
+  .download-wrapper1,
+  .download5 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .download5 {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-31xl);
+    background-color: var(--color-limegreen-100);
+    justify-content: flex-start;
+    padding: var(--padding-2xs) var(--padding-8xl);
+    white-space: nowrap;
+  }
+  .download-wrapper1 {
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xl) 0 var(--padding-9xl);
+  }
+  .avatar-image-parent1,
+  .avatar-row3 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .avatar-image-parent1 {
+    flex: 1;
+    border-radius: var(--br-11xl);
+    background-color: #10ee4e;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 var(--padding-25xl) var(--padding-16xl) var(--padding-24xl);
+    box-sizing: border-box;
+    gap: var(--gap-23xl);
+    min-width: 201px;
+  }
+  .avatar-row3 {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 43px;
+  }
+  .avatars-grid,
+  .avatars-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .avatars-grid {
+    align-self: stretch;
+    justify-content: flex-start;
+    gap: var(--gap-7xl);
+  }
+  .avatars-grid-wrapper {
+    width: 579px;
+    justify-content: flex-end;
+    padding: 0 0 19px;
+    box-sizing: border-box;
+    min-width: 579px;
+    max-width: 100%;
+    font-size: var(--font-size-mini);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+    top: 0%;
+  }
+  .xpace-bento-grid {
+    width: 100%;
+    position: relative;
+    background-color: #dfffde;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15px 17px 31px;
+    box-sizing: border-box;
+    gap: var(--gap-7xl);
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 30px;
+    color: var(--color-white);
+    font-family: var(--font-fredoka-one);
+  }
+  @media screen and (max-width: 1125px) {
+    .left-column-parent {
+      flex: 1;
+      padding-top: 22px;
+      padding-bottom: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .avatars-grid-wrapper {
+      flex: 1;
+    }
+    .xpace-bento-grid {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 1025px) {
+    .community-space {
+      font-size: 24px;
+    }
+    .community-space-is {
+      font-size: 29px;
+      line-height: 32px;
+    }
+    .were-xpace-founded-in-container {
+      font-size: 34px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .kosov-icon,
+    .testimonial {
+      flex: 1;
+    }
+    .testimonials {
+      flex-wrap: wrap;
+    }
+    .left-column-parent {
+      gap: 39px;
+      padding-top: var(--padding-xl);
+      box-sizing: border-box;
+      min-width: 100%;
+    }
+    .avatar-row,
+    .avatar-row2,
+    .avatar-row3 {
+      flex-wrap: wrap;
+      gap: var(--gap-mid);
+    }
+    .avatar-row3 {
+      gap: var(--gap-2xl);
+    }
+    .avatars-grid-wrapper {
+      min-width: 100%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .community-space {
+      font-size: 18px;
+    }
+    .left-column {
+      flex-wrap: wrap;
+    }
+    .community-space-is {
+      font-size: var(--font-size-3xl);
+      line-height: 24px;
+    }
+    .were-xpace-founded-in-container {
+      font-size: 25px;
+    }
+    .left-column-parent {
+      gap: 20px;
+    }
+    .avatar-image-container,
+    .avatar-image-group,
+    .avatar-image-parent,
+    .avatar-image-parent1,
+    .avatar-row1,
+    .frame-div {
+      gap: var(--gap-2xl);
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+  }
+  body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-inter: Inter;
+    --font-jost: Jost;
+    --font-fredoka-one: "Fredoka One";
+  
+    /* font sizes */
+    --font-size-mini: 15px;
+    --font-size-3xl: 22px;
+  
+    /* Colors */
+    --color-limegreen-100: #83e85a;
+    --color-black: #000;
+    --color-white: #fff;
+  
+    /* Gaps */
+    --gap-7xl: 26px;
+    --gap-2xl: 21px;
+    --gap-23xl: 42px;
+    --gap-16xl: 35px;
+    --gap-mid: 17px;
+  
+    /* Paddings */
+    --padding-25xl: 44px;
+    --padding-16xl: 35px;
+    --padding-24xl: 43px;
+    --padding-xl: 20px;
+    --padding-8xl: 27px;
+    --padding-9xl: 28px;
+    --padding-2xs: 11px;
+    --padding-5xs: 8px;
+    --padding-4xs: 9px;
+  
+    /* Border radiuses */
+    --br-11xl: 30px;
+    --br-31xl: 50px;
+    --br-140xl: 159px;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="xpace-bento-grid">
+      <div class="left-column-parent">
+        <div class="left-column">
+          <div class="left-column-child"></div>
+          <img src="" width="80px" style="border-radius: 300px;" class="logo">
+          <div class="space-details">
+            <h1 class="community-space">COMMUNITY SPACE</h1>
+          </div>
+        </div>
+        <h1 class="community-space-is">
+          Community Space is an innovative web application designed to serve as
+          a digital hub for fostering collaboration, engagement, and
+          connectivity within local communities.
+        </h1>
+        <div class="right-column">
+          <button class="learn-more">
+            <div class="learn-more-child"></div>
+            <div class="learn-more1">Learn More</div>
+          </button>
+          <div class="testimonials">
+            <img
+              class="kosov-icon"
+              loading="lazy"
+              alt=""
+              src="https://ideogram.ai/assets/image/lossless/response/zdx2-sXKR6GZyLOn-MHLaw"
+            />
+
+
+            <div class="testimonial">
+              <!-- <img src="" class="slogo"> -->
+              <div class="testimonial-content">
+                <div class="testimonial-details">
+                  <!-- <h1 class="were-xpace-founded-in-container">
+                    <p class="were-xpace">We’re Xpace</p>
+                    <p class="founded-in-london">Founded in London</p>
+                  </h1> -->
+                  <!-- <div class="main-kosovo-news-image"></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="frame-child"
+          loading="lazy"
+          alt=""
+          src="./public/arrow-10.svg"
+        />
+      </div>
+      <div class="avatars-grid-wrapper">
+        <div class="avatars-grid">
+          <div class="avatar-row">
+            <div class="avatar-row1">
+              <img
+                class="avatar-image-icon"
+                alt=""
+                src="https://cdn-icons-png.flaticon.com/512/4960/4960785.png">
+
+                <div class="download-wrapper">
+                    <button class="download2" onclick="window.location.href='issue.html'">
+                      <div class="download-inner"></div>
+                      <div class="click-here2">Raise an issue</div>
+                    </button>
+                  </div>
+            </div>
+            <div class="avatar-image-parent">
+              <img
+                class="avatar-image-icon1"
+                alt=""
+                src="https://cdn-icons-png.flaticon.com/512/2312/2312493.png"
+              />
+
+              <div class="download-wrapper">
+                <button class="download2" onclick="window.location.href='discussion.html'">
+                  <div class="download-inner"></div>
+                  <div class="click-here2">Discussion forum</div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="avatar-row2">
+            <div class="avatar-image-group">
+              <img
+                class="avatar-image-icon2"
+                loading="lazy"
+                alt=""
+                src="https://cdn-icons-png.freepik.com/512/6892/6892801.png"
+              />
+
+              <div class="download-wrapper">
+                <button class="download2" onclick="window.location.href='Mar.html'">
+                  <div class="download-inner"></div>
+                  <div class="click-here2">Marketplace</div>
+                </button>
+              </div>
+            </div>
+            <div class="avatar-image-container">
+              <img
+                class="avatar-image-icon3"
+                alt=""
+                src="https://t3.ftcdn.net/jpg/04/29/56/34/360_F_429563469_B1rLRjF5dZuz8hhW3g9nT2J8iXWrKYZM.jpg"
+              />
+
+              <div class="download-wrapper">
+                <button class="download2" onclick="window.location.href='eventinfo.html'">
+                  <div class="download-inner"></div>
+                  <div class="click-here2">Community Updates</div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="avatar-row3">
+            <div class="frame-div">
+              <img
+                class="avatar-image-icon4"
+                alt=""
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbC6d5XWdjfsV8Xn2VaYhHStsZBmYuohNePg&s"
+              />
+
+              <div class="download-wrapper">
+                <button class="download2" onclick="window.location.href='index2.html'">
+                  <div class="download-inner"></div>
+                  <div class="click-here2">Community Feedback</div>
+                </button>
+              </div>
+            </div>
+            <div class="avatar-image-parent1">
+              <img
+                class="avatar-image-icon5"
+                alt=""
+                src="https://www.shutterstock.com/image-vector/city-hall-building-icon-government-260nw-750142807.jpg"
+              />
+
+              <div class="download-wrapper">
+                <button class="download2" onclick="window.location.href='helpline.html'">
+                  <div class="download-inner"></div>
+                  <div class="click-here2">Community Helpline</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Info</title>
+    <style>
+         .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            position: relative;
+            height: 40px;
+        }
+
+        .hamburger-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            transition: opacity 0.5s;
+        }
+
+        header {
+            background-color: #2346f7c3;
+            color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            height: 40px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 10px;
+            background:url('https://c4.wallpaperflare.com/wallpaper/9/519/764/mountains-best-for-desktop-background-wallpaper-preview.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .box {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        .box img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .box .content {
+            flex-grow: 1;
+        }
+        .box .content h2 {
+            margin: 0 0 10px;
+        }
+        .box .buttons {
+            margin-top: 10px;
+        }
+        .box .buttons button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .box .buttons button:last-child {
+            background-color: #28a745;
+        }
+        .box .buttons button:hover {
+            opacity: 0.8;
+        }
+        .box .enroll-form {
+            display: none;
+            margin-top: 10px;
+        }
+        .box .enroll-form input {
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .box .enroll-form button {
+            background-color: #28a745;
+        }
+        #box1 {
+    text-align: left;
+    animation: slideIn 0.1s ease-in; /* Apply animation */
+  }
+  #box2 {
+    text-align: left;
+    animation: slideIn 0.3s ease; /* Apply animation */
+  }
+  #box3 {
+    text-align: left;
+    animation: slideIn 0.6s ease; /* Apply animation */
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(-10%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+    </style>
+</head>
+<body>
+    <header class="text-center py-4">
+        <div class="header-content">
+            <div class="hamburger-icon" onclick="toggleNav()">&#9776;</div>
+            <h2>Emergency Info</h2>
+        </div>
+    </header>
+    <br>
+    <br>
+    <div class="container">
+        <div class="box" id="box1">
+            <img src="https://previews.123rf.com/images/archivector/archivector1902/archivector190200192/117306723-donor-blood-icon-symbol-of-red-blood-drops-in-circumference-flat-vector-illustration-for-web-design.jpg" alt="Profile Picture">
+            <div class="content">
+                <h2>"Urgent: Blood Needed Immediately! Blood group: B+"</h2>
+                <div class="buttons">
+                    <button onclick="enroll(this)">Enroll</button>
+                    <button onclick="markAsRead(this)">Mark as Read</button>
+                </div>
+                <div class="enroll-form">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Phone Number">
+                    <button onclick="submitForm(this)">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="box2">
+            <img src="https://img.pikbest.com/png-images/creative-safe-home-logo-design-vector_1633837.png!sw800" alt="Profile Picture">
+            <div class="content">
+                <h2>"Family needs shelter urgently due to unexpected situation. If you can offer a spare room or any shelter, please help."</h2>
+                <div class="buttons">
+                    <button onclick="enroll(this)">Enroll</button>
+                    <button onclick="markAsRead(this)">Mark as Read</button>
+                </div>
+                <div class="enroll-form">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Phone Number">
+                    <button onclick="submitForm(this)">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="box3">
+            <img src="https://i.pinimg.com/originals/2e/a2/14/2ea2148dd81aed2655be6eb0461bdc48.jpg" alt="Profile Picture">
+            <div class="content">
+                <h2>Community faces imminent water shortage in the upcoming days.</h2>
+                <div class="buttons">
+                    <button onclick="enroll(this)">Enroll</button>
+                    <button onclick="markAsRead(this)">Mark as Read</button>
+                </div>
+                <div class="enroll-form">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Phone Number">
+                    <button onclick="submitForm(this)">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function enroll(button) {
+            var form = button.parentElement.nextElementSibling;
+            form.style.display = 'block';
+        }
+
+        function markAsRead(button) {
+            var box = button.closest('.box');
+            box.style.display = 'none';
+        }
+
+        function submitForm(button) {
+            var box = button.closest('.box');
+            alert('Thank you for submitting!');
+            box.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

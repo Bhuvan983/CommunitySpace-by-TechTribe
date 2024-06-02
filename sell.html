@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Your Ad</title>
+    <link rel="stylesheet" href="Mar.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Community Marketplace</h1>
+            <button class="home-btn" onclick="window.location.href='Mar.html'">Home</button>
+        </div>
+        <nav>
+            <button class="sell-btn" onclick="window.location.href='sell.html'">+ Sell</button>
+        </nav>
+    </header>
+    <main>
+        <section id="sell-form">
+            <h2>Post Your Ad</h2>
+            <form>
+                <label for="category">Choose a category:</label>
+                <select id="category" onchange="window.location.href=this.value">
+                    <option value="">Select Category</option>
+                    <option value="sale.html">For Sale: Houses & Apartments</option>
+                    <option value="rent.html">For Rent: Houses & Apartments</option>
+                    <option value="product.html">Local Products</option>
+                </select>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Community Marketplace</p>
+    </footer>
+</body>
+</html>

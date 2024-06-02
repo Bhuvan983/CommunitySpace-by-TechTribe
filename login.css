@@ -1,0 +1,167 @@
+/* login.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, hsl(192, 52%, 41%), hsl(297, 85%, 67%));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #ff5f6d;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+header nav a:hover {
+    background: #ff7e5f;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Adjust for fixed header */
+    width: 80%; /* Increase the width of the container */
+    max-width: 1200px; /* Limit the maximum width */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Add space between the login and sign-up columns */
+}
+
+.col {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.form-wrapper {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 100%; /* Ensure full width */
+}
+
+.form-wrapper .form {
+    text-align: center;
+}
+
+.form-wrapper .form .input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-wrapper .form .input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff7e5f;
+}
+
+.form-wrapper .form .input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.form-wrapper .form .input-group input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.form-wrapper .form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ff5f6d;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-wrapper .form button:hover {
+    background: #ff7e5f;
+}
+
+.form-wrapper .form p {
+    margin-top: 20px;
+}
+
+.form-wrapper .form p b {
+    cursor: pointer;
+    color: #ff7e5f;
+    text-decoration: underline;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.sign-in .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sign-in .text h2 {
+    font-size: 2em;
+}
+
+.sign-up .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sign-up .text h2 {
+    font-size: 2em;
+}
+
+.sign-in .img,
+.sign-up .img {
+    display: none;
+}
+
+input[type="checkbox"] {
+    accent-color: #ff7e5f;
+}

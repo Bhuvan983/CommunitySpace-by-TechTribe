@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            position: relative;
+            height: 30px;
+        }
+
+        .hamburger-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            transition: opacity 0.5s;
+        }
+
+        header {
+            background-color: #2346f7c3;
+            color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            height: 30px;
+        }
+
+    
+div.polaroid {
+  width:300px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  display:grid;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #04AA6D;
+}
+
+.button1:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+.main{
+    
+    display:flex;
+    /* grid-template-columns: 1fr 1fr; */
+    gap:100px;
+    margin-left: 25%;
+
+  
+
+}
+
+body{
+    background:url('https://png.pngtree.com/background/20220729/original/pngtree-wave-background-vector-wallpaper-picture-image_1874512.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+</style>
+</head>
+<body>
+    <header class="text-center py-4">
+        <div class="header-content">
+            <div class="hamburger-icon" onclick="toggleNav()">&#9776;</div>
+            <h2>Community Based Updates</h2>
+        </div>
+    </header>
+
+
+    <br><br><br><br>
+<div class="main">
+    <div class="polaroid">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5rdkbbtTTat4DDzWEeAYftCyf-XbtPM4UPQ&s" alt="5 Terre" style="width:100%">
+        <div class="container">
+          <button class="button button1" onclick="window.location.href='emer.html'">Emergencies</button>
+        </div>
+      </div>
+      
+      <div class="polaroid">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjHqZ95GF_PmOZPKTyeZg7dFoEuYtxISpVUQ&s" alt="Norther Lights" style="width:100%">
+        <div class="container">
+          <button class="button button1" onclick="window.location.href='events.html'">Community-Events</button>
+        </div>
+      </div>
+
+
+</div>
+
+
+    
+</body>
+</html>

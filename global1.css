@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-outfit: Outfit;
+  --font-adamina: Adamina;
+  --font-mulish: Mulish;
+
+  /* font sizes */
+  --font-size-17xl: 36px;
+  --font-size-3xl: 22px;
+  --font-size-10xl: 29px;
+  --font-size-lg: 18px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-dimgray: #5b5b5b;
+  --color-black: #000;
+  --color-darkred: #9e090f;
+  --color-firebrick: #c43036;
+  --color-gray: #171717;
+
+  /* Paddings */
+  --padding-20xl: 39px;
+  --padding-10xl: 29px;
+  --padding-smi: 13px;
+}
+/* Add this to your global1.css file */
+
