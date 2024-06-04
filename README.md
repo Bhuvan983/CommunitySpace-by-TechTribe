@@ -51,3 +51,11 @@ Community-Space addresses these challenges by providing a unified platform that 
 ![WhatsApp Image 2024-06-02 at 19 40 49_0a980744](https://github.com/Bhuvan983/CommunitySpace-by-TechTribe/assets/104959919/a67ce5e1-2843-4e56-b786-da0fd6205c2f)
 ![WhatsApp Image 2024-06-02 at 19 43 54_dd7c9e9d](https://github.com/Bhuvan983/CommunitySpace-by-TechTribe/assets/104959919/d1653bf2-00e7-4eee-9dbf-0b69e71640f0)
 
+<h4>Community Feedback:</h4> Provide input on community projects and issues to help shape your neighborhood.
+
+![image](https://github.com/Bhuvan983/CommunitySpace-by-TechTribe/assets/104959919/7f533208-313d-4415-b923-c4bd4d2aaa33)
+
+<h4>Community Helpline: </h4>Access essential services and support through a dedicated community helpline.
+
+![image](https://github.com/Bhuvan983/CommunitySpace-by-TechTribe/assets/104959919/d4b3a64d-47d8-45a2-9a59-24f0af498023)
+
